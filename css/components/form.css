@@ -1,0 +1,72 @@
+.form__header {
+    display: flex;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.form__header span {
+    color: gray;
+}
+
+.form__header {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.form__group {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+}
+
+.form__group label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+
+.form__group input {
+    flex: 1;
+    padding: 5px;
+    color: rgb(150, 150, 150);
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 1rem;
+}
+
+.form__group .input:focus, 
+.form__group .input:valid {
+    border-bottom: 2px solid var(--primary500);
+}
+
+.form__group .input:focus ~ label, 
+.form__group .input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 0.9rem;
+}
+
+.form__group button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.3rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: ease-in-out 1s;
+    background-color: var(--primary500);
+    color: var(--white);
+    border-radius: var(--radius);
+    border: none;
+}
+
+.form__group button:hover {
+    cursor: pointer;
+    background-color: var(--primary600);
+}
