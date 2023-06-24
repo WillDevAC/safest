@@ -68,6 +68,16 @@
     width: 100%;
 }
 
+/* @Mobile */
+@media screen and (max-width: 768px){
+	
+  .box {
+    margin: 0.8rem;
+  }
+
+}
+
+/* @Animations */
 .shake {
   animation: shake 0.5s linear infinite;
 }
