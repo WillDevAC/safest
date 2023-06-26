@@ -39,17 +39,6 @@ const insertInventory = (nomeInve, cidade, estado, rua, bairro, numero, cep, com
     const complemento = $("#complemento").val();
     const data = $("#data").val();
   
-    if (isEmptyValuesInput(nomeInve, cidade, estado, rua, bairro, numero, cep, complemento, data)) {
-      $.toast({
-        heading: 'Ooops...',
-        text: 'Preencha todos os campos obrigatórios.',
-        showHideTransition: 'plain',
-        icon: 'warning',
-        position: 'top-right'
-      });
-      return;
-    }
-  
     // Call the insertInventory function with the provided data.
     insertInventory(nomeInve, cidade, estado, rua, bairro, numero, cep, complemento, data);
   };
