@@ -31,7 +31,28 @@ const Login = (email, password) => {
 };
 
 const Register = (name, email, password) => {
-  //code.
+  //@Auth logic.
+  $.ajax({
+    url: "",
+    type: "POST",
+    data: {
+      name: name,
+      email: email,
+      password: password,
+    },
+  }).done(function (msg) {
+    
+    //success.
+
+  }).fail(function (msg) {
+    $.toast({
+        heading: 'Ooops...',
+        text: 'Falha ao registrar usuário',
+        showHideTransition: 'plain',
+        icon: 'error',
+        position: 'top-right'
+    })
+  });
 };
 
 $("#btn-login").click(function () {
@@ -55,5 +76,9 @@ $("#btn-login").click(function () {
 });
 
 $(".targetRegister").click(() => {
-  //invoke Register().
+  const name = $("#nome").val();
+  const email = $("#email").val();
+  const password = $("#password").val();
+
+  Register(name, email, password);
 });
