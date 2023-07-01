@@ -29,6 +29,7 @@ const insertSituation = (situacoes) => {
     insertArraySituation();
     insertSituation(situacoes);
     console.log(situacoes);
+    limpar();
     
   });
 
@@ -88,5 +89,7 @@ const insertSituation = (situacoes) => {
     const classificacaoConsequenciaReferencia = $("#classificacao-cosequencia-referencia").val("");
     const classificacaoConsequenciaprobabilidade = $("#classificacao-probabilidade-referencia").val("");
     const matriz = $("#matriz").val("");
+
+    window.location.href = "#";
   }
   
