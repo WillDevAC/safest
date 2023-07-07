@@ -1,34 +1,4 @@
-const insertInventory = (nomeInve, cidade, estado, rua, bairro, numero, cep, complemento, data) => {
-    // @Auth logic.
-  
-    $.ajax({
-      url: "/refatoracao_safest/controladores/rota.php",
-      type: "POST",
-      data: {
-        controlador: "inventario",
-        acao: "inserir",
-        nomeInve: nomeInve,
-        cidade: cidade,
-        estado: estado,
-        rua: rua,
-        bairro: bairro,
-        numero: numero,
-        cep: cep,
-        complemento: complemento,
-        data: data,
-      },
-    })
-      .done(function (msg) {
-        // Callback function for successful AJAX request.
-        // You can handle the response here.
-      })
-      .fail(function (msg) {
-        // Callback function for failed AJAX request.
-        // You can handle the error here.
-      });
-  };
-  
-  const Register = () => {
+  function insertInventory(){
     const nomeInve = $("#nomeInve").val();
     const cidade = $("#cidade").val();
     const estado = $("#estado").val();
@@ -38,10 +8,26 @@ const insertInventory = (nomeInve, cidade, estado, rua, bairro, numero, cep, com
     const cep = $("#cep").val();
     const complemento = $("#complemento").val();
     const data = $("#data").val();
+
+    const inventory = {
+      nomeInve: nomeInve,
+      cidade: cidade,
+      estado: estado,
+      rua: rua,
+      bairro: bairro,
+      numero: numero,
+      cep: cep,
+      complemento: complemento,
+      data: data
+    }
+
+    localStorage.setItem('inventario', JSON.stringify(inventory));
   
-    // Call the insertInventory function with the provided data.
-    insertInventory(nomeInve, cidade, estado, rua, bairro, numero, cep, complemento, data);
-  };
+  }
   
-$("#btn-inven").click(Register);
+
+$("#btn-inven").click(() => {
+  insertInventory();
+  window.location.href = "../safest/insertSituation.html";
+});
   
