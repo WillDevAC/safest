@@ -1,17 +1,27 @@
 const situacoes = [];
 
 $("#btn-enviar").click(() => {
+  
   insertSituation();
-  window.location.href = "../safest/formCadastrarImagens.html";
+
+  const inventario = JSON.parse(localStorage.getItem('inventario'));
+  inventario.situacoes = JSON.parse(localStorage.getItem('situacoes'));
+
+  localStorage.setItem('inventario', JSON.stringify(inventario));
+  localStorage.removeItem('situacoes');
+
+  window.location.href = "../pages/insertImages.php";
 });
 
 $("#btn-adicionar").click(() => {
+  alert("oi");
   insertSituation();
   limpar();
   window.location.href = "#";
 });
 
 function insertSituation() {
+  
   const funcao = $("#funcao").val();
   const descricao = $("#descricao").val();
   const epi = $("#epi").val();

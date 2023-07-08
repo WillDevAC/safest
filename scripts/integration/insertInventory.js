@@ -1,3 +1,5 @@
+  const URL_REQUEST = "../../back/?rota="
+
   function insertInventory(){
     const nomeInve = $("#nomeInve").val();
     const cidade = $("#cidade").val();
@@ -28,6 +30,26 @@
 
 $("#btn-inven").click(() => {
   insertInventory();
-  window.location.href = "../safest/insertSituation.html";
+  /*
+  $.ajax({
+    url: URL_REQUEST + "InserirSituacao",
+    type: "POST",    
+    beforeSend: function () {
+      $.LoadingOverlay("show");
+    },
+  })
+    .done(function (response) {
+      $.LoadingOverlay("hide");
+      console.log(response);      
+      //var url = JSON.parse(response).url;
+      //window.location.href = url;
+    })
+
+    .fail(function (jqXHR, textStatus, response) {
+      alert(response);
+    });*/
+
+  window.location.href = "../front/pages/insertSituation.php";
+   
 });
   

@@ -1,36 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
 :root {
-    --primary500: #059669;
-    --primary600: #047857;
-
-    --bg: #f9fafb;
-    --white: #ffffff;
-    --border: #d1d5db;
-
-    --radius: 5px;
+    --branding: #368A5C;
+    --bg: #f4f4f4;
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 body {
-    background: linear-gradient(to right, #224a2c, #134E5E); 
     font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
     box-sizing: border-box;
-}
-
-a {
-    color: var(--primary500);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--primary600);
-}
-
-ul li {
-    list-style-type: none;
 }
