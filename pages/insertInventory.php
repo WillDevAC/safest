@@ -34,7 +34,9 @@
         <button id="btn-inven">Enviar</button>
     </div>
 </body>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="js/interface/toast.js"></script>
-    <script src="js/integration/insertInventory.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/interface/jquery.js"></script>
+    <script src="scripts/interface/jquery.mask.js"></script>
+    <script src="scripts/interface/loader.js"></script>
+    <script src="scripts/integration/insertInventory.js"></script>
 </html>

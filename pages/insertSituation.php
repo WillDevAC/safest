@@ -9,6 +9,13 @@
     <h1>INVENTÁRIO DE PERIGOS E RISCOS</h1><br>
     <h2>IDENTIFICAÇÃO E DESCRIÇÃO DOS PERIGOS:</h2><br>
 
+    
+    <label for="funcao">Nome do Funcionário:</label><br>
+        <input type="text" id="funcionario" name="funcionario"><br><br>
+
+        <label for="descricao">Setor: </label><br>
+        <input type="text" id="setor" name="setor"><br><br>
+
         <label for="funcao">Função:</label><br>
         <input type="text" id="funcao" name="funcao"><br><br>
 
@@ -93,7 +100,9 @@
           <button id="btn-enviar">Finalizar</button>
           <button id="btn-adicionar">Adicionar Novo Perigo</button>
 </body>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="js/interface/toast.js"></script>
-    <script src="js/integration/insertSituation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/interface/jquery.js"></script>
+    <script src="../scripts/interface/jquery.mask.js"></script>
+    <script src="../scripts/interface/loader.js"></script>
+    <script src="../scripts/integration/insertSituation.js"></script>
 </html>
