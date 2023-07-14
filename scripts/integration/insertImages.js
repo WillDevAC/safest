@@ -1,5 +1,5 @@
 const fotos = [];
-const URL_REQUEST = "../../back/?rota=";
+const URL_REQUEST = "../../safest-backend/?rota=";
 
 function previewFiles() {
   const preview = document.querySelector("#preview");

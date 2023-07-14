@@ -14,7 +14,6 @@ $("#btn-enviar").click(() => {
 });
 
 $("#btn-adicionar").click(() => {
-  alert("oi");
   insertSituation();
   limpar();
   window.location.href = "#";
